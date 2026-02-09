@@ -122,5 +122,37 @@ function sleep() {
 }
 
 dinner();
+function dinner() {
+  return new Promise((resolve) => {
+    console.log("Dinner time 🍽️");
+    setTimeout(() => {
+      console.log("Dinner finished ✅");
+      resolve();
+    }, 2000);
+  });
+}
+
+function goToPlayground() {
+  return new Promise((resolve) => {
+    console.log("At playground ⚽");
+    setTimeout(() => {
+      console.log("Done playing 🏃‍♂️");
+      resolve();
+    }, 1500);
+  });
+}
+
+function sleep() {
+  return new Promise((resolve) => {
+    console.log("Sleeping 😴💤");
+    resolve();
+  });
+}
+
+// chaining promises
+dinner()
+  .then(goToPlayground)
+  .then(sleep);
+
 
 
