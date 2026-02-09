@@ -1,9 +1,3 @@
-const handleSubmit = (event) => {
-    event.preventDefault(); 
-    console.log("form submitted")
-}
-const form=document.querySelector('form')
-form.addEventListener('submit',handleSubmit)
 //let count = 1
 
 //let interval = setInterval(() => {
@@ -85,74 +79,103 @@ form.addEventListener('submit',handleSubmit)
 
 
 //})
-function eatDinner() {
-  console.log("Dinner start 🍽️");
+//function doHomework(){
+  //const p=new Promise(function(resolve,reject){
+    //setTimeout(()=>{
+      //let done=true;
+      //if(done){
+        //console.log("homework is done")
+        //resolve("homework is not done")
+      //}else{
+       // reject("homework is not done")
+     // }
 
-  setTimeout(() => {
-    console.log("Dinner done ✅");
-    goToPlayground();
-  }, 2000);
+    //},5000)
+  //} n
+//)
+//return p
+//function dinner() {
+ // console.log("Dinner time 🍽️");
+
+  //setTimeout(() => {
+    //console.log("Dinner finished ✅");
+   // goToPlayground();
+ // }, 2000);
+//}
+
+//function goToPlayground() {
+  //console.log("At playground ⚽");
+
+  //setTimeout(() => {
+    //console.log("Done playing 🏃‍♂️");
+   // sleep();
+ // }, 1500);
+//}
+
+//function sleep() {
+  //console.log("Sleeping 😴💤");
+//}
+
+//dinner();
+
+//}
+//function dinner() {
+  ///return new Promise((resolve) => {
+    //console.log("Dinner time 🍽️");
+    //setTimeout(() => {
+      //console.log("Dinner finished ✅");
+     // resolve();
+   // }, 2000);
+ // });
+//}
+
+//function goToPlayground() {
+  //return new Promise((resolve) => {
+    //console.log("At playground ⚽");
+    //setTimeout(() => {
+     // console.log("Done playing ");
+    //  resolve();
+  //  }, 1500);
+ // });
+//}
+
+//function sleep() {
+  //return new Promise((resolve) => {
+    //console.log("Sleeping ");
+    //resolve();
+  //});
+//}
+
+
+//dinner()
+  //.then(goToPlayground)
+//  .then(sleep);
+console.log("first line")
+setTimeout(()=>{
+console.log("time 1 ")
+},0)
+const p=new Promise((resolve,reject)=>{
+resolve()
+
+}
+)
+p.then(()=>{
+  console.log("inside promise ")
 }
 
-function goToPlayground() {
-  console.log("Going to playground 🏃‍♂️⚽");
+)
+const p2=new Promise((resolve,reject)=>{
+resolve()
 }
 
-eatDinner();
-function dinner() {
-  console.log("Dinner time 🍽️");
-
-  setTimeout(() => {
-    console.log("Dinner finished ✅");
-    goToPlayground();
-  }, 2000);
-}
-
-function goToPlayground() {
-  console.log("At playground ⚽");
-
-  setTimeout(() => {
-    console.log("Done playing 🏃‍♂️");
-    sleep();
-  }, 1500);
-}
-
-function sleep() {
-  console.log("Sleeping 😴💤");
-}
-
-dinner();
-function dinner() {
-  return new Promise((resolve) => {
-    console.log("Dinner time 🍽️");
-    setTimeout(() => {
-      console.log("Dinner finished ✅");
-      resolve();
-    }, 2000);
-  });
-}
-
-function goToPlayground() {
-  return new Promise((resolve) => {
-    console.log("At playground ⚽");
-    setTimeout(() => {
-      console.log("Done playing 🏃‍♂️");
-      resolve();
-    }, 1500);
-  });
-}
-
-function sleep() {
-  return new Promise((resolve) => {
-    console.log("Sleeping 😴💤");
-    resolve();
-  });
-}
-
-// chaining promises
-dinner()
-  .then(goToPlayground)
-  .then(sleep);
-
-
-
+)
+p.then(()=>{
+  console.log("inside promise ")
+})
+const p3=new Promise ((resolve,reject)=>{
+resolve()  
+})
+p.then(()=>{
+  console.log("inside promise ")
+})
+console.log("last line ")
