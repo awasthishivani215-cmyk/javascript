@@ -85,3 +85,42 @@ form.addEventListener('submit',handleSubmit)
 
 
 //})
+function eatDinner() {
+  console.log("Dinner start 🍽️");
+
+  setTimeout(() => {
+    console.log("Dinner done ✅");
+    goToPlayground();
+  }, 2000);
+}
+
+function goToPlayground() {
+  console.log("Going to playground 🏃‍♂️⚽");
+}
+
+eatDinner();
+function dinner() {
+  console.log("Dinner time 🍽️");
+
+  setTimeout(() => {
+    console.log("Dinner finished ✅");
+    goToPlayground();
+  }, 2000);
+}
+
+function goToPlayground() {
+  console.log("At playground ⚽");
+
+  setTimeout(() => {
+    console.log("Done playing 🏃‍♂️");
+    sleep();
+  }, 1500);
+}
+
+function sleep() {
+  console.log("Sleeping 😴💤");
+}
+
+dinner();
+
+
