@@ -150,32 +150,123 @@
 //dinner()
   //.then(goToPlayground)
 //  .then(sleep);
-console.log("first line")
-setTimeout(()=>{
-console.log("time 1 ")
-},0)
-const p=new Promise((resolve,reject)=>{
-resolve()
 
-}
-)
-p.then(()=>{
-  console.log("inside promise ")
+//console.log("first line")
+//setTimeout(()=>{
+//console.log("time 1 ")
+//},0)
+//const p=new Promise((resolve,reject)=>{
+//resolve()
+
+//}
+//)
+//p.then(()=>{
+  //console.log("inside promise ")
+//}
+
+//)
+//const p2=new Promise((resolve,reject)=>{
+//resolve()
+//}
+
+//)
+//p.then(()=>{
+//  console.log("inside promise ")
+//})
+//const p3=new Promise ((resolve,reject)=>{
+//resolve()  
+//})
+//p.then(()=>{
+//  console.log("inside promise ")
+//})
+//console.log("last line ")
+//function orderFood() {
+    //return new Promise(function(resolve, reject) {
+        //setTimeout(() => {
+       //     console.log("Food Ordered");
+     //       resolve("Food Ordered");
+   //     }, 1000);
+ //   });
+//}
+
+//function prepareFood() {
+    //return new Promise(function(resolve, reject) {
+        //setTimeout(() => {
+        //    console.log("Food Prepared");
+      //      resolve("Food Prepared");
+    //    }, 3000);
+  //  });
+//}
+
+//function deliverFood() {
+  //  return new Promise(function(resolve, reject) {
+       // setTimeout(() => {
+     //       console.log("Food Delivered");
+       //     resolve("Food Delivered");
+   //     }, 2000);
+  //  });
+//}
+
+//orderFood()
+//.then((data) => {
+   // console.log(data);
+  //  return prepareFood();
+//})
+//.then((data) => {
+    //console.log(data);
+  //  return deliverFood();
+//})
+//.then((data) => {
+  //  console.log(data);
+//})
+//.catch((err) => {
+  //  console.log(err);
+//});
+
+//async function order() {
+    //const data = await orderFood();
+    //console.log(data);
+    //await prepareFood();
+  //  await deliverFood();
+//}
+
+//order();
+//console.log("1st line");
+
+//try {
+    // let sample = 324
+    // console.log(sample)
+   //
+   // let age = 10
+   // if (age < 18) {
+     //   throw new Error("Access Denied")
+    //}
+//}
+//catch (error) {
+  //  console.log(error)
+//}
+//finally {
+  //  console.log("finally block")
+//}
+
+//console.log("last line")
+async function getData() {
+    try {
+        const response = await fetch("https://dummyjson.com/products");
+
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+
+        data.products.forEach((product) => {
+            console.log("Price:", product.price);
+        });
+
+    } catch (error) {
+        console.error("Error occurred:", error);
+    }
 }
 
-)
-const p2=new Promise((resolve,reject)=>{
-resolve()
-}
-
-)
-p.then(()=>{
-  console.log("inside promise ")
-})
-const p3=new Promise ((resolve,reject)=>{
-resolve()  
-})
-p.then(()=>{
-  console.log("inside promise ")
-})
-console.log("last line ")
+getData();
